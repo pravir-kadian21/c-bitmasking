@@ -2,7 +2,13 @@
 using namespace std;
 
 int getkthbit(int n,int k){
-    return n&(1<<k)==0?0:1;
+    int ans = n&(1<<k);
+    if(ans==0){
+        return 0;
+    }
+    else{
+        return 1;
+    }
 }
 int main() {
     int n,k;
